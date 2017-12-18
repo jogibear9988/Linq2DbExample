@@ -14,9 +14,10 @@ namespace ConsoleApp2.Linq2Db.Mapping
 		static void MapAa(FluentMappingBuilder fb)
 		{
 			fb.Entity<Aa>()
-				.HasPrimaryKey(x => x.Id).HasTableName("Id")
+				.HasTableName("Aa")
 				.Ignore(x => x.NotInDb)
-				.HasColumn(x => x.Name).HasTableName("Name");
+				.Property(x => x.Id).IsPrimaryKey()
+				.Property(x => x.Name).HasColumnName("Name");
 		}
 	}
 }

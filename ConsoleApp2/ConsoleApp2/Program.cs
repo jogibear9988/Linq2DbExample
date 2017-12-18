@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using ConsoleApp2.Linq2Db.Config;
 using ConsoleApp2.Linq2Db.DTO;
 using ConsoleApp2.Linq2Db.Mapping;
@@ -20,6 +21,9 @@ namespace ConsoleApp2
 
 				table.Where(x => x.Name.StartsWith("A")).Set(a => a.Name, b => "B" + b.Name).Update();
 			}
+
+			Console.WriteLine("Feddich...");
+			Console.ReadLine();
 		}
 	}
 }

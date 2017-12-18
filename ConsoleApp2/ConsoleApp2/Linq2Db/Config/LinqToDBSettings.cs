@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using LinqToDB;
 using LinqToDB.Configuration;
-using LinqToDB.DataProvider.SQLite;
 
 namespace ConsoleApp2.Linq2Db.Config
 {
@@ -10,7 +9,7 @@ namespace ConsoleApp2.Linq2Db.Config
 		static LinqToDBSettings()
 		{
 			_iConnectionStringSettings = new[]
-				{new ConnectionStringSettings() {Name = "Default", ProviderName = ProviderName.SQLite, ConnectionString = "Data Source=c:\\aa.db;Version=3;"}};
+				{new ConnectionStringSettings() {Name = "Default", ProviderName = ProviderName.SQLite, ConnectionString = "Data Source=Test.db;Version=3;"}};
 		}
 
 		private static IConnectionStringSettings[] _iConnectionStringSettings;
